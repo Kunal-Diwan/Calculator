@@ -1,55 +1,60 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Calculator : Reboot13</title>
-    <link rel="stylesheet" href="style.css">
-
-    <script src="app.js"></script>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>calc</title>
 </head>
+
 <body>
-    
-    <div class="container">
-        <div class="form">
-     <input type="text"  id="eqn"  readonly>
+  <div class="container">
+    <div class="main">
+      <div class="toggle">
+        <h2>calc</h2>
+        <div class="theme-switch">
+          <div class="theme-num">
+            <ul>
+              <li>1</li>
+              <li>2</li>
+              <li>3</li>
+            </ul>
+          </div>
+          <div class="theme-toggle">
+            <div onclick="theme1()" class="theme1 themeIndicator" id="theme1"></div>
+            <div onclick="theme2()" class="theme2 themeIndicator" id="theme2"></div>
+            <div onclick="theme3()" class="theme3 themeIndicator" id="theme3"></div>
+        </div>
+        </div>
+      </div>
+      <input type="text" class="output" id="outPutBox" readonly>
+      <div class="input">
+        <div class="inputGrid">
+          <div onclick="calcFn(7)" class="calcBtn">7</div>
+          <div onclick="calcFn(8)" class="calcBtn">8</div>
+          <div onclick="calcFn(9)" class="calcBtn">9</div>
+          <div onclick="removeLast()" class="calcBtn calcDel">DEL</div>
+          <div onclick="calcFn(4)" class="calcBtn">4</div>
+          <div onclick="calcFn(5)" class="calcBtn">5</div>
+          <div onclick="calcFn(6)" class="calcBtn">6</div>
+          <div onclick="calcFn('+')" class="calcBtn">+</div>
+          <div onclick="calcFn(1)" class="calcBtn">1</div>
+          <div onclick="calcFn(2)" class="calcBtn">2</div>
+          <div onclick="calcFn(3)" class="calcBtn">3</div>
+          <div onclick="calcFn('-')" class="calcBtn">-</div>
+          <div onclick="calcFn('.')" class="calcBtn">.</div>
+          <div onclick="calcFn(0)" class="calcBtn">0</div>
+          <div onclick="calcFn('/')" class="calcBtn">/</div>
+          <div onclick="calcFn('*')" class="calcBtn">x</div>
+          <div onclick="resetOutput()" class="calcBtn calcBtnReset">RESET</div>
+          <div onclick="calAll()" class="calcBtn calcBtnEquals">=</div>
+          
+        </div>
+      </div>
     </div>
-        <div class="row">
-            <div class="cube operators" id="reset" onclick="solveEqn(this.id)">AC</div>
-            <div class="cube operators" id="modulus" onclick="solveEqn(this.id)">%</div>
-            <div class="cube operators" id="div" onclick="solveEqn(this.id)">/</div>
-            <div class="cube operators" id="multiply" onclick="solveEqn(this.id)">X</div>
-        </div>
-        <div class="row">
-            <div class="cube nums" id="7" onclick="solveEqn(this.id)">7</div>
-            <div class="cube nums" id="8" onclick="solveEqn(this.id)">8</div>
-            <div class="cube nums" id="9" onclick="solveEqn(this.id)">9</div>
-            <div class="cube operators" id="sub" onclick="solveEqn(this.id)">-</div>
-        </div>
-        <div class="row">
-            <div class="cube nums" id="4" onclick="solveEqn(this.id)">4</div>
-            <div class="cube nums" id="5" onclick="solveEqn(this.id)">5</div>
-            <div class="cube nums" id="6" onclick="solveEqn(this.id)">6</div>
-            <div class="cube operators plus" id="plus" onclick="solveEqn(this.id)">+</div>
-        </div>
-        <div class="row position">
-            <div class="cube nums" id="1" onclick="solveEqn(this.id)">1</div>
-            <div class="cube nums" id="2" onclick="solveEqn(this.id)">2</div>
-            <div class="cube nums" id="3" onclick="solveEqn(this.id)">3</div>
-        </div>
-        <div class="row position">
-            <div class="cube nums" id="00" onclick="solveEqn(this.id)">00</div>
-            <div class="cube nums" id="0" onclick="solveEqn(this.id)">0</div>
-            <div class="cube nums" id="point" onclick="solveEqn(this.id)">.</div>
-            <div class="cube operators equal" id="equal" onclick="solveEqn(this.id)">=</div>
-        </div>
-
-       <center>
-            <p class="position"><a href="https://telegram.dog/kunaldiwan">Developed by kunal</a></p>
-       </center>
-        
-    </div>
-
+  </div>
 </body>
+<script src="./index.js"></script>
 </html>
