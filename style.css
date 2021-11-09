@@ -1,81 +1,237 @@
-body {
-    background-color: rgb(198, 228, 255);
-    display: grid;
-    place-items: center;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    margin: 10px;
-    background-color: #ececec;
-    }
-.container{
-    position: relative;
-    padding-top: 2em;
-    margin-top: 40px;
-    height:430px;
-    width: 250px;
-    background-color: #ececec;
-    border-radius: 2em;
-    box-shadow: -6px -6px 4px rgb(255, 255, 255, 80%),
-    6px 6px 4px rgba(0, 0, 0, 10%);
-}
-input {
-   text-align: right;
-   font-family: monospace;
-   margin-bottom:0.5em;
-   font-weight: bold;
-   font-size: 2em;
-   height: 50px; 
-   width: 240px;
-   cursor: not-allowed;
-   border: none;
-   border-radius: 5px;
-}
-.row {
-    display: inline-flex;
-    margin-top: 0.5px;
-}
-.cube {
-    margin-top: -3px;
-    margin: 6px;
-    height: 50px;
-    width: 50px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    font-weight: bold;
-    cursor: pointer;
-    border-radius: 50%;
+@import url("https://fonts.googleapis.com/css2?family=Spartan:wght@700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
 }
 
-.operators {
-    background-color: rgb(67, 142, 255);
-    color: #fff;
+body {
+  background-color: #3A4764;
+  font-family: 'Spartan', sans-serif;
 }
-.nums { 
-    background-color: rgb(255, 255, 255);
-    color: rgb(0, 0, 0);
+
+.container {
+  width: 100vw;
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
-.plus {
-    height: 110px;
-    border-radius: 15px;
+
+.main {
+  min-width: 320px;
+  height: 95%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 1rem;
 }
-.position {
-    position: relative;
-    top: -62px
+
+.toggle {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: white;
 }
-.equal{
-    border-radius: 40%;
+
+.toggle h2 {
+  font-size: 32px;
 }
-p a {
- color:rgb(67, 142, 255);
- font-family: monospace;
- text-decoration: none;
- cursor: pointer;
- font-weight: bold;
+
+.theme-switch {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
-.form {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding-top: 2px;
+
+.theme-num ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 80px;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
 }
+
+.theme-toggle {
+  width: 80px;
+  height: 32px;
+  background: #182034;
+  border-radius: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.themeIndicator {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: red;
+  margin: 1px 4px;
+}
+
+.theme1 {
+  opacity: 1;
+}
+
+.theme2 {
+  opacity: 0;
+}
+
+.theme3 {
+  opacity: 0;
+}
+
+.output {
+  width: 100%;
+  min-height: 12%;
+  background: #182034;
+  border-radius: 10px;
+  margin: 1.5rem auto;
+  border: none;
+  color: white;
+  text-align: right;
+  font-size: 25px;
+  font-weight: 800;
+  outline: none;
+}
+
+.input {
+  width: 100%;
+  min-height: 65%;
+  background: #232C43;
+  border-radius: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #444B5A;
+  font-size: 32px;
+}
+
+.inputGrid {
+  width: 90%;
+  height: 90%;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+  -ms-grid-rows: 1fr 1fr 1fr 1fr 1fr;
+      grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+  grid-column-gap: 1rem;
+  grid-row-gap: 1rem;
+  padding: 1rem;
+}
+
+.calcBtn {
+  background: #EAE3DC;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-shadow: 0 4px #B4A597;
+          box-shadow: 0 4px #B4A597;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.calcBtn:hover {
+  background: #dbd4cc;
+}
+
+.calcDel {
+  background: #637197;
+  -webkit-box-shadow: 0 4px #404E72;
+          box-shadow: 0 4px #404E72;
+  color: white;
+  font-size: 20px;
+}
+
+.calcBtnReset {
+  background: #637197;
+  -webkit-box-shadow: 0 4px #404E72;
+          box-shadow: 0 4px #404E72;
+  -ms-grid-column: 1;
+      grid-column-start: 1;
+  grid-column-end: 3;
+  color: white;
+  font-size: 20px;
+}
+
+.calcBtnEquals {
+  background: #D03F2F;
+  -webkit-box-shadow: 0 4px #93261A;
+          box-shadow: 0 4px #93261A;
+  -ms-grid-column: 3;
+      grid-column-start: 3;
+  grid-column-end: 5;
+  color: white;
+  font-size: 20px;
+}
+
+.calcBtnEquals:hover {
+  background: #c03a2c;
+}
+
+.calcBtnReset:hover, .calcDel:hover {
+  background: #536186;
+}
+
+@media (min-width: 700px) {
+  .main {
+    width: 500px;
+  }
+  .output {
+    height: 18%;
+  }
+}
+/*# sourceMappingURL=style.css.map */
